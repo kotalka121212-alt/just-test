@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"G:/progects_c++/git_progs/just-test/build/cmake_install.cmake",
+		"G:/progects_c++/git_progs/just-test/build/src/files/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

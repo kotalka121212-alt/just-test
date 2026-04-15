@@ -1,0 +1,10 @@
+^G:\PROGECTS_C++\GIT_PROGS\JUST-TEST\BUILD\CMAKEFILES\4D7754BE43AF16182293A8CFAD291A28\GENERATE.STAMP.RULE
+setlocal
+G:\progects_c++\cmakl\bin\cmake.exe -SG:/progects_c++/git_progs/just-test -BG:/progects_c++/git_progs/just-test/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file G:/progects_c++/git_progs/just-test/build/MyFirstProject.slnx
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
