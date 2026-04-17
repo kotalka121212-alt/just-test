@@ -1,9 +1,27 @@
 #pragma once
 #include <string>
 
-namespace data{
+using namespace std;
 
-void print(std::string a);
+namespace data{
+void print(string a);
+string txt(string &a);
+
+
+class datas{
+    public:
+
+
+
+
+
+
+
+
+
+
+
+};
 
 
 

@@ -7,10 +7,7 @@
 using namespace std;
 
 
-string txt(string &a)
-{
-    return a = "../" + a + ".txt";
-}
+
 
 void build(string &name,const string &txt){
 ofstream file(name);
@@ -21,9 +18,6 @@ file << name << endl;
 file.close();
 cout << "file printed" << endl;
 }
-
-
-
 }
 
 
@@ -35,9 +29,9 @@ int main(){
 
 
 string pole = "banan";
-txt(pole);
+data::txt(pole);
 
-build(pole,"dildo hahaha");
+build(pole,"hahaha");
 
 
 
