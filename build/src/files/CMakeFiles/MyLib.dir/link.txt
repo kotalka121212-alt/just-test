@@ -1,2 +1,2 @@
-G:\progects_c++\mingw\ucrt64\bin\ar.exe qc libMyLib.a CMakeFiles/MyLib.dir/data.cpp.obj
+G:\progects_c++\mingw\ucrt64\bin\ar.exe qc libMyLib.a CMakeFiles/MyLib.dir/data.cpp.obj CMakeFiles/MyLib.dir/jsones.cpp.obj
 G:\progects_c++\mingw\ucrt64\bin\ranlib.exe libMyLib.a

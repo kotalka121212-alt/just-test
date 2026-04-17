@@ -1,18 +1,15 @@
-src/files/CMakeFiles/MyLib.dir/data.cpp.obj: \
- G:\progects_c++\git_progs\just-test\src\files\data.cpp \
- G:/progects_c++/git_progs/just-test/src/files/data.h \
- G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/iostream \
+src/files/CMakeFiles/MyLib.dir/jsones.cpp.obj: \
+ G:\progects_c++\git_progs\just-test\src\files\jsones.cpp \
+ G:/progects_c++/git_progs/just-test/src/files/jsones.h \
+ G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/string \
  G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/requires_hosted.h \
  G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++config.h \
  G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/os_defines.h \
  G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/cpu_defines.h \
  G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/pstl/pstl_config.h \
- G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/ostream \
- G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/ostream.h \
- G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/ios \
- G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/iosfwd \
  G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/stringfwd.h \
  G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/memoryfwd.h \
+ G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/char_traits.h \
  G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/postypes.h \
  G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/cwchar \
  G:/progects_c++/mingw/ucrt64/include/wchar.h \
@@ -34,57 +31,26 @@ src/files/CMakeFiles/MyLib.dir/data.cpp.obj: \
  G:/progects_c++/mingw/ucrt64/include/_mingw_stat64.h \
  G:/progects_c++/mingw/ucrt64/include/swprintf.inl \
  G:/progects_c++/mingw/ucrt64/include/sec_api/wchar_s.h \
- G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/exception \
- G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/exception.h \
- G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/version.h \
- G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/exception_ptr.h \
- G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/exception_defines.h \
- G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/cxxabi_init_exception.h \
- G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/typeinfo \
- G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/hash_bytes.h \
- G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/new \
- G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/move.h \
  G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/type_traits \
- G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/nested_exception.h \
- G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/char_traits.h \
+ G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/version.h \
+ G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/allocator.h \
+ G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++allocator.h \
+ G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/new_allocator.h \
+ G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/new \
+ G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/exception.h \
+ G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/functexcept.h \
+ G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/exception_defines.h \
+ G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/move.h \
+ G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/cpp_type_traits.h \
  G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/localefwd.h \
  G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++locale.h \
  G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/clocale \
  G:/progects_c++/mingw/ucrt64/include/locale.h \
  G:/progects_c++/mingw/ucrt64/include/stdio.h \
  G:/progects_c++/mingw/ucrt64/include/sec_api/stdio_s.h \
+ G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/iosfwd \
  G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/cctype \
  G:/progects_c++/mingw/ucrt64/include/ctype.h \
- G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/ios_base.h \
- G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/ext/atomicity.h \
- G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/gthr.h \
- G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
- G:/progects_c++/mingw/ucrt64/include/pthread.h \
- G:/progects_c++/mingw/ucrt64/include/errno.h \
- G:/progects_c++/mingw/ucrt64/include/sys/types.h \
- G:/progects_c++/mingw/ucrt64/include/process.h \
- G:/progects_c++/mingw/ucrt64/include/corecrt_startup.h \
- G:/progects_c++/mingw/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/limits.h \
- G:/progects_c++/mingw/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/syslimits.h \
- G:/progects_c++/mingw/ucrt64/include/limits.h \
- G:/progects_c++/mingw/ucrt64/include/signal.h \
- G:/progects_c++/mingw/ucrt64/include/pthread_signal.h \
- G:/progects_c++/mingw/ucrt64/include/time.h \
- G:/progects_c++/mingw/ucrt64/include/sys/timeb.h \
- G:/progects_c++/mingw/ucrt64/include/sec_api/sys/timeb_s.h \
- G:/progects_c++/mingw/ucrt64/include/_timeval.h \
- G:/progects_c++/mingw/ucrt64/include/pthread_time.h \
- G:/progects_c++/mingw/ucrt64/include/pthread_compat.h \
- G:/progects_c++/mingw/ucrt64/include/sched.h \
- G:/progects_c++/mingw/ucrt64/include/pthread_unistd.h \
- G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/atomic_word.h \
- G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/locale_classes.h \
- G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/string \
- G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/allocator.h \
- G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++allocator.h \
- G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/new_allocator.h \
- G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/functexcept.h \
- G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/cpp_type_traits.h \
  G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/ostream_insert.h \
  G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/cxxabi_forced.h \
  G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/stl_iterator_base_funcs.h \
@@ -114,14 +80,19 @@ src/files/CMakeFiles/MyLib.dir/data.cpp.obj: \
  G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/stl_construct.h \
  G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/string_view \
  G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/functional_hash.h \
+ G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/hash_bytes.h \
  G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/string_view.tcc \
  G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/ext/string_conversions.h \
  G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/cstdlib \
  G:/progects_c++/mingw/ucrt64/include/stdlib.h \
+ G:/progects_c++/mingw/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/limits.h \
+ G:/progects_c++/mingw/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/syslimits.h \
+ G:/progects_c++/mingw/ucrt64/include/limits.h \
  G:/progects_c++/mingw/ucrt64/include/sec_api/stdlib_s.h \
  G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/stdlib.h \
  G:/progects_c++/mingw/ucrt64/include/malloc.h \
  G:/progects_c++/mingw/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/mm_malloc.h \
+ G:/progects_c++/mingw/ucrt64/include/errno.h \
  G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/std_abs.h \
  G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/cstdio \
  G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/cerrno \
@@ -132,6 +103,35 @@ src/files/CMakeFiles/MyLib.dir/data.cpp.obj: \
  G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/uses_allocator.h \
  G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/uses_allocator_args.h \
  G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/tuple \
+ G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/iostream \
+ G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/ostream \
+ G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/ostream.h \
+ G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/ios \
+ G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/exception \
+ G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/exception_ptr.h \
+ G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/cxxabi_init_exception.h \
+ G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/typeinfo \
+ G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/nested_exception.h \
+ G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/ios_base.h \
+ G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/ext/atomicity.h \
+ G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/gthr.h \
+ G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
+ G:/progects_c++/mingw/ucrt64/include/pthread.h \
+ G:/progects_c++/mingw/ucrt64/include/sys/types.h \
+ G:/progects_c++/mingw/ucrt64/include/process.h \
+ G:/progects_c++/mingw/ucrt64/include/corecrt_startup.h \
+ G:/progects_c++/mingw/ucrt64/include/signal.h \
+ G:/progects_c++/mingw/ucrt64/include/pthread_signal.h \
+ G:/progects_c++/mingw/ucrt64/include/time.h \
+ G:/progects_c++/mingw/ucrt64/include/sys/timeb.h \
+ G:/progects_c++/mingw/ucrt64/include/sec_api/sys/timeb_s.h \
+ G:/progects_c++/mingw/ucrt64/include/_timeval.h \
+ G:/progects_c++/mingw/ucrt64/include/pthread_time.h \
+ G:/progects_c++/mingw/ucrt64/include/pthread_compat.h \
+ G:/progects_c++/mingw/ucrt64/include/sched.h \
+ G:/progects_c++/mingw/ucrt64/include/pthread_unistd.h \
+ G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/atomic_word.h \
+ G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/locale_classes.h \
  G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/locale_classes.tcc \
  G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/system_error \
  G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/error_constants.h \

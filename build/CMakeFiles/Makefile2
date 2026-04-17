@@ -129,12 +129,12 @@ src/libs/clean:
 CMakeFiles/my_app.dir/all: src/files/CMakeFiles/MyLib.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_app.dir\build.make CMakeFiles/my_app.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_app.dir\build.make CMakeFiles/my_app.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=G:\progects_c++\git_progs\just-test\build\CMakeFiles --progress-num=3,4 "Built target my_app"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=G:\progects_c++\git_progs\just-test\build\CMakeFiles --progress-num=4,5 "Built target my_app"
 .PHONY : CMakeFiles/my_app.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/my_app.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start G:\progects_c++\git_progs\just-test\build\CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start G:\progects_c++\git_progs\just-test\build\CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/my_app.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start G:\progects_c++\git_progs\just-test\build\CMakeFiles 0
 .PHONY : CMakeFiles/my_app.dir/rule
@@ -146,7 +146,7 @@ my_app: CMakeFiles/my_app.dir/rule
 # codegen rule for target.
 CMakeFiles/my_app.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_app.dir\build.make CMakeFiles/my_app.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=G:\progects_c++\git_progs\just-test\build\CMakeFiles --progress-num=3,4 "Finished codegen for target my_app"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=G:\progects_c++\git_progs\just-test\build\CMakeFiles --progress-num=4,5 "Finished codegen for target my_app"
 .PHONY : CMakeFiles/my_app.dir/codegen
 
 # clean rule for target.
@@ -161,12 +161,12 @@ CMakeFiles/my_app.dir/clean:
 src/files/CMakeFiles/MyLib.dir/all:
 	$(MAKE) $(MAKESILENT) -f src\files\CMakeFiles\MyLib.dir\build.make src/files/CMakeFiles/MyLib.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\files\CMakeFiles\MyLib.dir\build.make src/files/CMakeFiles/MyLib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=G:\progects_c++\git_progs\just-test\build\CMakeFiles --progress-num=1,2 "Built target MyLib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=G:\progects_c++\git_progs\just-test\build\CMakeFiles --progress-num=1,2,3 "Built target MyLib"
 .PHONY : src/files/CMakeFiles/MyLib.dir/all
 
 # Build rule for subdir invocation for target.
 src/files/CMakeFiles/MyLib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start G:\progects_c++\git_progs\just-test\build\CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start G:\progects_c++\git_progs\just-test\build\CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/files/CMakeFiles/MyLib.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start G:\progects_c++\git_progs\just-test\build\CMakeFiles 0
 .PHONY : src/files/CMakeFiles/MyLib.dir/rule
@@ -178,7 +178,7 @@ MyLib: src/files/CMakeFiles/MyLib.dir/rule
 # codegen rule for target.
 src/files/CMakeFiles/MyLib.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f src\files\CMakeFiles\MyLib.dir\build.make src/files/CMakeFiles/MyLib.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=G:\progects_c++\git_progs\just-test\build\CMakeFiles --progress-num=1,2 "Finished codegen for target MyLib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=G:\progects_c++\git_progs\just-test\build\CMakeFiles --progress-num=1,2,3 "Finished codegen for target MyLib"
 .PHONY : src/files/CMakeFiles/MyLib.dir/codegen
 
 # clean rule for target.

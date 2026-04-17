@@ -10,5 +10,11 @@
   "command": "G:\\progects_c++\\mingw\\ucrt64\\bin\\g++.exe  @CMakeFiles/MyLib.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\MyLib.dir\\data.cpp.obj -c G:\\progects_c++\\git_progs\\just-test\\src\\files\\data.cpp",
   "file": "G:/progects_c++/git_progs/just-test/src/files/data.cpp",
   "output": "src/files/CMakeFiles/MyLib.dir/data.cpp.obj"
+},
+{
+  "directory": "G:/progects_c++/git_progs/just-test/build/src/files",
+  "command": "G:\\progects_c++\\mingw\\ucrt64\\bin\\g++.exe  @CMakeFiles/MyLib.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\MyLib.dir\\jsones.cpp.obj -c G:\\progects_c++\\git_progs\\just-test\\src\\files\\jsones.cpp",
+  "file": "G:/progects_c++/git_progs/just-test/src/files/jsones.cpp",
+  "output": "src/files/CMakeFiles/MyLib.dir/jsones.cpp.obj"
 }
 ]

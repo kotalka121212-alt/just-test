@@ -153,6 +153,30 @@ data.cpp.s:
 	cd /d G:\progects_c++\git_progs\just-test\build && $(MAKE) $(MAKESILENT) -f src\files\CMakeFiles\MyLib.dir\build.make src/files/CMakeFiles/MyLib.dir/data.cpp.s
 .PHONY : data.cpp.s
 
+jsones.obj: jsones.cpp.obj
+.PHONY : jsones.obj
+
+# target to build an object file
+jsones.cpp.obj:
+	cd /d G:\progects_c++\git_progs\just-test\build && $(MAKE) $(MAKESILENT) -f src\files\CMakeFiles\MyLib.dir\build.make src/files/CMakeFiles/MyLib.dir/jsones.cpp.obj
+.PHONY : jsones.cpp.obj
+
+jsones.i: jsones.cpp.i
+.PHONY : jsones.i
+
+# target to preprocess a source file
+jsones.cpp.i:
+	cd /d G:\progects_c++\git_progs\just-test\build && $(MAKE) $(MAKESILENT) -f src\files\CMakeFiles\MyLib.dir\build.make src/files/CMakeFiles/MyLib.dir/jsones.cpp.i
+.PHONY : jsones.cpp.i
+
+jsones.s: jsones.cpp.s
+.PHONY : jsones.s
+
+# target to generate assembly for a file
+jsones.cpp.s:
+	cd /d G:\progects_c++\git_progs\just-test\build && $(MAKE) $(MAKESILENT) -f src\files\CMakeFiles\MyLib.dir\build.make src/files/CMakeFiles/MyLib.dir/jsones.cpp.s
+.PHONY : jsones.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -165,6 +189,9 @@ help:
 	@echo ... data.obj
 	@echo ... data.i
 	@echo ... data.s
+	@echo ... jsones.obj
+	@echo ... jsones.i
+	@echo ... jsones.s
 .PHONY : help
 
 

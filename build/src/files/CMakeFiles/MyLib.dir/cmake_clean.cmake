@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/MyLib.dir/data.cpp.obj"
   "CMakeFiles/MyLib.dir/data.cpp.obj.d"
+  "CMakeFiles/MyLib.dir/jsones.cpp.obj"
+  "CMakeFiles/MyLib.dir/jsones.cpp.obj.d"
   "libMyLib.a"
   "libMyLib.pdb"
 )

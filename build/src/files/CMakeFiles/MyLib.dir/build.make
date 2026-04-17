@@ -86,17 +86,34 @@ src/files/CMakeFiles/MyLib.dir/data.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyLib.dir/data.cpp.s"
 	cd /d G:\progects_c++\git_progs\just-test\build\src\files && G:\progects_c++\mingw\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S G:\progects_c++\git_progs\just-test\src\files\data.cpp -o CMakeFiles\MyLib.dir\data.cpp.s
 
+src/files/CMakeFiles/MyLib.dir/jsones.cpp.obj: src/files/CMakeFiles/MyLib.dir/flags.make
+src/files/CMakeFiles/MyLib.dir/jsones.cpp.obj: src/files/CMakeFiles/MyLib.dir/includes_CXX.rsp
+src/files/CMakeFiles/MyLib.dir/jsones.cpp.obj: G:/progects_c++/git_progs/just-test/src/files/jsones.cpp
+src/files/CMakeFiles/MyLib.dir/jsones.cpp.obj: src/files/CMakeFiles/MyLib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=G:\progects_c++\git_progs\just-test\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/files/CMakeFiles/MyLib.dir/jsones.cpp.obj"
+	cd /d G:\progects_c++\git_progs\just-test\build\src\files && G:\progects_c++\mingw\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/files/CMakeFiles/MyLib.dir/jsones.cpp.obj -MF CMakeFiles\MyLib.dir\jsones.cpp.obj.d -o CMakeFiles\MyLib.dir\jsones.cpp.obj -c G:\progects_c++\git_progs\just-test\src\files\jsones.cpp
+
+src/files/CMakeFiles/MyLib.dir/jsones.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MyLib.dir/jsones.cpp.i"
+	cd /d G:\progects_c++\git_progs\just-test\build\src\files && G:\progects_c++\mingw\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E G:\progects_c++\git_progs\just-test\src\files\jsones.cpp > CMakeFiles\MyLib.dir\jsones.cpp.i
+
+src/files/CMakeFiles/MyLib.dir/jsones.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyLib.dir/jsones.cpp.s"
+	cd /d G:\progects_c++\git_progs\just-test\build\src\files && G:\progects_c++\mingw\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S G:\progects_c++\git_progs\just-test\src\files\jsones.cpp -o CMakeFiles\MyLib.dir\jsones.cpp.s
+
 # Object files for target MyLib
 MyLib_OBJECTS = \
-"CMakeFiles/MyLib.dir/data.cpp.obj"
+"CMakeFiles/MyLib.dir/data.cpp.obj" \
+"CMakeFiles/MyLib.dir/jsones.cpp.obj"
 
 # External object files for target MyLib
 MyLib_EXTERNAL_OBJECTS =
 
 src/files/libMyLib.a: src/files/CMakeFiles/MyLib.dir/data.cpp.obj
+src/files/libMyLib.a: src/files/CMakeFiles/MyLib.dir/jsones.cpp.obj
 src/files/libMyLib.a: src/files/CMakeFiles/MyLib.dir/build.make
 src/files/libMyLib.a: src/files/CMakeFiles/MyLib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=G:\progects_c++\git_progs\just-test\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libMyLib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=G:\progects_c++\git_progs\just-test\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libMyLib.a"
 	cd /d G:\progects_c++\git_progs\just-test\build\src\files && $(CMAKE_COMMAND) -P CMakeFiles\MyLib.dir\cmake_clean_target.cmake
 	cd /d G:\progects_c++\git_progs\just-test\build\src\files && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\MyLib.dir\link.txt --verbose=$(VERBOSE)
 
