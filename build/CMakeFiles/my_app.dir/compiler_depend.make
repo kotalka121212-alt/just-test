@@ -3,6 +3,7 @@
 
 CMakeFiles/my_app.dir/main.cpp.obj: G:/progects_c++/git_progs/just-test/main.cpp \
   G:/progects_c++/git_progs/just-test/src/files/data.h \
+  G:/progects_c++/git_progs/just-test/src/files/jsones.h \
   G:/progects_c++/git_progs/just-test/src/libs/json.hpp \
   G:/progects_c++/mingw/ucrt64/include/_mingw.h \
   G:/progects_c++/mingw/ucrt64/include/_mingw_mac.h \
@@ -269,17 +270,7 @@ CMakeFiles/my_app.dir/main.cpp.obj: G:/progects_c++/git_progs/just-test/main.cpp
   G:/progects_c++/mingw/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/syslimits.h
 
 
-G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/char_traits.h:
-
-G:/progects_c++/mingw/ucrt64/include/_mingw_stat64.h:
-
 G:/progects_c++/git_progs/just-test/main.cpp:
-
-G:/progects_c++/mingw/ucrt64/include/sec_api/stdlib_s.h:
-
-G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/ostream.tcc:
-
-G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/locale_facets_nonio.h:
 
 G:/progects_c++/mingw/ucrt64/include/_mingw.h:
 
@@ -295,11 +286,27 @@ G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/gslice_array.h:
 
 G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/functexcept.h:
 
+G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/predefined_ops.h:
+
+G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/locale_facets.tcc:
+
+G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/refwrap.h:
+
+G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/move.h:
+
+G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/align.h:
+
+G:/progects_c++/git_progs/just-test/src/files/jsones.h:
+
 G:/progects_c++/mingw/ucrt64/include/_mingw_off_t.h:
 
 G:/progects_c++/git_progs/just-test/src/libs/json.hpp:
 
 G:/progects_c++/mingw/ucrt64/include/_mingw_mac.h:
+
+G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/char_traits.h:
+
+G:/progects_c++/mingw/ucrt64/include/_mingw_stat64.h:
 
 G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/locale_facets_nonio.tcc:
 
@@ -338,16 +345,6 @@ G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/exception_defines.h:
 G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/forward_list.h:
 
 G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/algorithmfwd.h:
-
-G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/predefined_ops.h:
-
-G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/locale_facets.tcc:
-
-G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/refwrap.h:
-
-G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/move.h:
-
-G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/align.h:
 
 G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/alloc_traits.h:
 
@@ -446,6 +443,12 @@ G:/progects_c++/mingw/ucrt64/include/corecrt_stdio_config.h:
 G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/locale_classes.h:
 
 G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/locale_conv.h:
+
+G:/progects_c++/mingw/ucrt64/include/sec_api/stdlib_s.h:
+
+G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/ostream.tcc:
+
+G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/locale_facets_nonio.h:
 
 G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/localefwd.h:
 

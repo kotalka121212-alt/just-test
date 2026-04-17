@@ -5,6 +5,7 @@
 
 using namespace std;
 
+
 void data::build(const string &name,const string &txt){
 ofstream file(name);
 if (file.is_open())
@@ -28,7 +29,6 @@ string data::txt(string &a)
 }
 
 data::datas::datas(string &name,const string &txt){
-
 ofstream file(name);
 if (file.is_open())
 {
