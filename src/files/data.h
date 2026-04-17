@@ -14,7 +14,6 @@ void build(const string &name,const string &txt);
 class datas{
     public:
 
-static string path;
 datas(string &name,const string &txt);
 
 
