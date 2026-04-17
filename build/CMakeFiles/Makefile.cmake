@@ -37,6 +37,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/4.2.1/CMakeRCCompiler.cmake"
   "CMakeFiles/4.2.1/CMakeSystem.cmake"
   "G:/progects_c++/git_progs/just-test/src/files/CMakeLists.txt"
+  "G:/progects_c++/git_progs/just-test/src/libs/CMakeLists.txt"
   )
 
 # The corresponding makefile is:
@@ -49,6 +50,7 @@ set(CMAKE_MAKEFILE_OUTPUTS
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/files/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/libs/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:

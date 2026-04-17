@@ -4,3 +4,5 @@ G:/progects_c++/git_progs/just-test/build/CMakeFiles/rebuild_cache.dir
 G:/progects_c++/git_progs/just-test/build/src/files/CMakeFiles/MyLib.dir
 G:/progects_c++/git_progs/just-test/build/src/files/CMakeFiles/edit_cache.dir
 G:/progects_c++/git_progs/just-test/build/src/files/CMakeFiles/rebuild_cache.dir
+G:/progects_c++/git_progs/just-test/build/src/libs/CMakeFiles/edit_cache.dir
+G:/progects_c++/git_progs/just-test/build/src/libs/CMakeFiles/rebuild_cache.dir
