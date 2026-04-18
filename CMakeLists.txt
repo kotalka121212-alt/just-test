@@ -12,7 +12,14 @@ add_subdirectory(src/files)
 add_subdirectory(src/libs)
 
 # Создаем исполняемый файл (exe) из исходника main.cpp
-add_executable(my_app main.cpp)
+add_executable(my_app 
+main.cpp
+src/files/data.cpp
+src/files/jsones.cpp
+
+ )
+
+
 
 
 target_link_libraries(my_app PRIVATE MyLib nlohmann_json)

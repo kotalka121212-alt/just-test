@@ -86,20 +86,54 @@ CMakeFiles/my_app.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/my_app.dir/main.cpp.s"
 	G:\progects_c++\mingw\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S G:\progects_c++\git_progs\just-test\main.cpp -o CMakeFiles\my_app.dir\main.cpp.s
 
+CMakeFiles/my_app.dir/src/files/data.cpp.obj: CMakeFiles/my_app.dir/flags.make
+CMakeFiles/my_app.dir/src/files/data.cpp.obj: CMakeFiles/my_app.dir/includes_CXX.rsp
+CMakeFiles/my_app.dir/src/files/data.cpp.obj: G:/progects_c++/git_progs/just-test/src/files/data.cpp
+CMakeFiles/my_app.dir/src/files/data.cpp.obj: CMakeFiles/my_app.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=G:\progects_c++\git_progs\just-test\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/my_app.dir/src/files/data.cpp.obj"
+	G:\progects_c++\mingw\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_app.dir/src/files/data.cpp.obj -MF CMakeFiles\my_app.dir\src\files\data.cpp.obj.d -o CMakeFiles\my_app.dir\src\files\data.cpp.obj -c G:\progects_c++\git_progs\just-test\src\files\data.cpp
+
+CMakeFiles/my_app.dir/src/files/data.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/my_app.dir/src/files/data.cpp.i"
+	G:\progects_c++\mingw\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E G:\progects_c++\git_progs\just-test\src\files\data.cpp > CMakeFiles\my_app.dir\src\files\data.cpp.i
+
+CMakeFiles/my_app.dir/src/files/data.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/my_app.dir/src/files/data.cpp.s"
+	G:\progects_c++\mingw\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S G:\progects_c++\git_progs\just-test\src\files\data.cpp -o CMakeFiles\my_app.dir\src\files\data.cpp.s
+
+CMakeFiles/my_app.dir/src/files/jsones.cpp.obj: CMakeFiles/my_app.dir/flags.make
+CMakeFiles/my_app.dir/src/files/jsones.cpp.obj: CMakeFiles/my_app.dir/includes_CXX.rsp
+CMakeFiles/my_app.dir/src/files/jsones.cpp.obj: G:/progects_c++/git_progs/just-test/src/files/jsones.cpp
+CMakeFiles/my_app.dir/src/files/jsones.cpp.obj: CMakeFiles/my_app.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=G:\progects_c++\git_progs\just-test\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/my_app.dir/src/files/jsones.cpp.obj"
+	G:\progects_c++\mingw\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_app.dir/src/files/jsones.cpp.obj -MF CMakeFiles\my_app.dir\src\files\jsones.cpp.obj.d -o CMakeFiles\my_app.dir\src\files\jsones.cpp.obj -c G:\progects_c++\git_progs\just-test\src\files\jsones.cpp
+
+CMakeFiles/my_app.dir/src/files/jsones.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/my_app.dir/src/files/jsones.cpp.i"
+	G:\progects_c++\mingw\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E G:\progects_c++\git_progs\just-test\src\files\jsones.cpp > CMakeFiles\my_app.dir\src\files\jsones.cpp.i
+
+CMakeFiles/my_app.dir/src/files/jsones.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/my_app.dir/src/files/jsones.cpp.s"
+	G:\progects_c++\mingw\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S G:\progects_c++\git_progs\just-test\src\files\jsones.cpp -o CMakeFiles\my_app.dir\src\files\jsones.cpp.s
+
 # Object files for target my_app
 my_app_OBJECTS = \
-"CMakeFiles/my_app.dir/main.cpp.obj"
+"CMakeFiles/my_app.dir/main.cpp.obj" \
+"CMakeFiles/my_app.dir/src/files/data.cpp.obj" \
+"CMakeFiles/my_app.dir/src/files/jsones.cpp.obj"
 
 # External object files for target my_app
 my_app_EXTERNAL_OBJECTS =
 
 my_app.exe: CMakeFiles/my_app.dir/main.cpp.obj
+my_app.exe: CMakeFiles/my_app.dir/src/files/data.cpp.obj
+my_app.exe: CMakeFiles/my_app.dir/src/files/jsones.cpp.obj
 my_app.exe: CMakeFiles/my_app.dir/build.make
 my_app.exe: src/files/libMyLib.a
 my_app.exe: CMakeFiles/my_app.dir/linkLibs.rsp
 my_app.exe: CMakeFiles/my_app.dir/objects1.rsp
 my_app.exe: CMakeFiles/my_app.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=G:\progects_c++\git_progs\just-test\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable my_app.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=G:\progects_c++\git_progs\just-test\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable my_app.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\my_app.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

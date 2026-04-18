@@ -165,6 +165,54 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_app.dir\build.make CMakeFiles/my_app.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/files/data.obj: src/files/data.cpp.obj
+.PHONY : src/files/data.obj
+
+# target to build an object file
+src/files/data.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_app.dir\build.make CMakeFiles/my_app.dir/src/files/data.cpp.obj
+.PHONY : src/files/data.cpp.obj
+
+src/files/data.i: src/files/data.cpp.i
+.PHONY : src/files/data.i
+
+# target to preprocess a source file
+src/files/data.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_app.dir\build.make CMakeFiles/my_app.dir/src/files/data.cpp.i
+.PHONY : src/files/data.cpp.i
+
+src/files/data.s: src/files/data.cpp.s
+.PHONY : src/files/data.s
+
+# target to generate assembly for a file
+src/files/data.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_app.dir\build.make CMakeFiles/my_app.dir/src/files/data.cpp.s
+.PHONY : src/files/data.cpp.s
+
+src/files/jsones.obj: src/files/jsones.cpp.obj
+.PHONY : src/files/jsones.obj
+
+# target to build an object file
+src/files/jsones.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_app.dir\build.make CMakeFiles/my_app.dir/src/files/jsones.cpp.obj
+.PHONY : src/files/jsones.cpp.obj
+
+src/files/jsones.i: src/files/jsones.cpp.i
+.PHONY : src/files/jsones.i
+
+# target to preprocess a source file
+src/files/jsones.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_app.dir\build.make CMakeFiles/my_app.dir/src/files/jsones.cpp.i
+.PHONY : src/files/jsones.cpp.i
+
+src/files/jsones.s: src/files/jsones.cpp.s
+.PHONY : src/files/jsones.s
+
+# target to generate assembly for a file
+src/files/jsones.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_app.dir\build.make CMakeFiles/my_app.dir/src/files/jsones.cpp.s
+.PHONY : src/files/jsones.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -178,6 +226,12 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... src/files/data.obj
+	@echo ... src/files/data.i
+	@echo ... src/files/data.s
+	@echo ... src/files/jsones.obj
+	@echo ... src/files/jsones.i
+	@echo ... src/files/jsones.s
 .PHONY : help
 
 

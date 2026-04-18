@@ -155,7 +155,6 @@ CMakeFiles/my_app.dir/main.cpp.obj: \
  G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/basic_file.h \
  G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++io.h \
  G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/fstream.tcc \
- G:/progects_c++/git_progs/just-test/src/files/jsones.h \
  G:/progects_c++/git_progs/just-test/src/libs/json.hpp \
  G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/algorithm \
  G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/stl_algo.h \
@@ -265,4 +264,5 @@ CMakeFiles/my_app.dir/main.cpp.obj: \
  G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/numeric \
  G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/bits/stl_numeric.h \
  G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/pstl/glue_numeric_defs.h \
- G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/any
+ G:/progects_c++/mingw/ucrt64/include/c++/15.2.0/any \
+ G:/progects_c++/git_progs/just-test/src/files/jsones.h
