@@ -16,8 +16,11 @@ class file{
 
     public:
 
-//makefile
+//?makefile
 file(string &name);
+//!deletefile
+static void destroyfile(const string &name);
+
 
 //print в файл
 void file_pr(const string &a);

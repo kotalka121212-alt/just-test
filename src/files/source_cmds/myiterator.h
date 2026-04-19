@@ -8,6 +8,7 @@ namespace iter
 {
 void choose();
 void make_file();
+void destory_file();
 
 
 

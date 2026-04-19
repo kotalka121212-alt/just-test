@@ -15,6 +15,11 @@ jason.file_pr(fil);
 
 
 
+
+}
+
+void iter::destory_file(){
+    data::file::destroyfile("../spawn_files/2.json");
 }
 
 void iter::choose(){
@@ -23,5 +28,6 @@ data::print("choose your tool");
 cin >> a; cout << endl;
 switch (a){
 case 1:make_file();break;
+case 2:iter::destory_file();break;
 }
 }

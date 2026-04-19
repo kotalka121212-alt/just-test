@@ -55,3 +55,10 @@ void data::file::file_pr(const char* a) {
     file_pr(std::string(a));  // просто вызываем string версию
 }
 
+
+void data::file::destroyfile(const string &name){
+if(filesystem::remove(name)){
+    cout << "file " << name << " deleted!" << endl;
+}
+else {cout << "file " << name << " cannot delete" << endl;}
+};
