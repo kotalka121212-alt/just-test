@@ -1,7 +1,6 @@
 #include <jsones.h>
-#include <iostream>
-#include <string>
-#include <fstream>
 
+using namespace std;
+using json = nlohmann::json;
 
 

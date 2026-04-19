@@ -1,9 +1,6 @@
 #include <data.h>
 #include <jsones.h>
-#include <iostream>
-#include <fstream>
-#include <string>
-#include <json.hpp>
+#include <includes.h>
 
 using namespace std;
 using json = nlohmann::json;
@@ -12,32 +9,22 @@ using json = nlohmann::json;
 
 int main(){
 
-
-string pole = "banan";
-data::txt(pole);
-
-
 json fil;
 fil["name"] = "banan";
 fil["kolichestvo"] = 21;
 fil["arr"] = {"2","52","42","67"};
 
-ofstream file("../1.json", std::ios::app);
-if (file.is_open())
-{
-file << fil << endl;
-file.close();
-cout << "file printed" << endl;
-}
+string pole = "banan";
+data::txt(pole, "txt");
 
 
-data::datas e(pole,"hahaha");
+string jsn = "2";
+data::txt(jsn,"json");
 
-data::print("banan");
-cout << "hi" << endl;
-
-
-
+data::file a(jsn);
+data::file e(pole);
+e.file_pr("da");
+a.file_pr(fil);
 
     return 0;
 } 

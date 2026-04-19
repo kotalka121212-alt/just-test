@@ -1,5 +1,6 @@
 # Добавляем библиотеку
 add_library(MyLib STATIC 
+includes.h
 data.cpp data.h
 jsones.cpp jsones.h
 
