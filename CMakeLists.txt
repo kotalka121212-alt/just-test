@@ -22,4 +22,4 @@ src/files/jsones.cpp
 
 
 
-target_link_libraries(my_app PRIVATE MyLib nlohmann_json)
+target_link_libraries(my_app PRIVATE MyLib nlohmann_json boost_interf)

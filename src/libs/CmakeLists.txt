@@ -1,2 +1,15 @@
 add_library(nlohmann_json INTERFACE)
-target_include_directories(nlohmann_json INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})
+
+target_include_directories(nlohmann_json INTERFACE 
+${CMAKE_CURRENT_SOURCE_DIR}
+
+
+)
+
+
+add_library(boost_interf INTERFACE)
+target_include_directories(boost_interf INTERFACE
+${CMAKE_CURRENT_SOURCE_DIR}/boost_1_90_0
+
+
+)
