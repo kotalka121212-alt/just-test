@@ -21,10 +21,19 @@ data::txt(pole, "txt");
 string jsn = "2";
 data::txt(jsn,"json");
 
-data::file a(jsn);
-data::file e(pole);
-e.file_pr("da");
-a.file_pr(fil);
+data::file jason(jsn);
+data::file text(pole);
+text.file_pr("da");
+jason.file_pr(fil);
+
+
+
+
+
+
+
+
+
 
     return 0;
 } 
