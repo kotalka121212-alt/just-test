@@ -1,3 +1,0 @@
-G:\progects_c++\cmakl\bin\cmake.exe -E rm -f CMakeFiles\my_app1.dir/objects.a
-G:\progects_c++\mingw\ucrt64\bin\ar.exe qc CMakeFiles\my_app1.dir/objects.a @CMakeFiles\my_app1.dir\objects1.rsp
-G:\progects_c++\mingw\ucrt64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\my_app1.dir/objects.a -Wl,--no-whole-archive -o my_app1.exe -Wl,--out-implib,libmy_app1.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\my_app1.dir\linkLibs.rsp
