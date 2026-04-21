@@ -1,8 +1,6 @@
 # Добавляем библиотеку
-add_library(MyLib STATIC 
-includes.h
-data.cpp data.h
-jsones.cpp jsones.h
+add_library(kt_math STATIC 
+kt_math.h kt_math.cpp
 
 )
 
@@ -11,5 +9,8 @@ jsones.cpp jsones.h
 
 # Указываем, где искать заголовочные файлы этой библиотеки
 # PUBLIC означает: все, кто линкует MyLib, автоматически видят папку ${CMAKE_CURRENT_SOURCE_DIR}
-target_include_directories(MyLib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
-target_link_libraries(MyLib PRIVATE linker)
+target_include_directories(kt_math PUBLIC 
+${CMAKE_CURRENT_SOURCE_DIR}
+
+)
+target_link_libraries(kt_math PRIVATE linker)

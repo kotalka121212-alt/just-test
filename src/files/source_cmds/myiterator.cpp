@@ -18,6 +18,13 @@ jason.file_pr(fil);
 
 }
 
+void iter::maths(){
+    int a = 1;
+    data::print("what: ");
+    cin >> a; cout << endl;
+    cout << kt_math::faktor(a) << endl;
+};
+
 void iter::destory_file(){
     data::file::destroyfile("../spawn_files/2.json");
 }
@@ -29,5 +36,6 @@ cin >> a; cout << endl;
 switch (a){
 case 1:make_file();break;
 case 2:iter::destory_file();break;
+case 3:iter::maths();break;
 }
 }

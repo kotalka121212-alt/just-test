@@ -1,0 +1,30 @@
+add_library(linker INTERFACE
+
+
+
+
+)
+target_include_directories(linker INTERFACE 
+${CMAKE_CURRENT_SOURCE_DIR}/files/source_cmds
+${CMAKE_CURRENT_SOURCE_DIR}/files
+
+
+)
+
+target_link_libraries(linker INTERFACE
+MyLib 
+nlohmann_json 
+boost_interf
+mysources
+kt_math
+
+
+)
+
+add_subdirectory(files)
+add_subdirectory(libs)
+add_subdirectory(files/source_cmds)
+add_subdirectory(modules)
+
+
+
