@@ -1,7 +1,7 @@
 # Добавляем библиотеку
 add_library(kt_math STATIC 
 kt_math/kt_math.h kt_math/kt_math.cpp
-
+kt_neyrons/neyrons.h kt_neyrons/neyrons.cpp
 )
 
 
@@ -12,6 +12,8 @@ kt_math/kt_math.h kt_math/kt_math.cpp
 target_include_directories(kt_math PUBLIC 
 ${CMAKE_CURRENT_SOURCE_DIR}
 ${CMAKE_CURRENT_SOURCE_DIR}/kt_math
+${CMAKE_CURRENT_SOURCE_DIR}/kt_neyrons
+
 
 )
 target_link_libraries(kt_math PRIVATE linker)
