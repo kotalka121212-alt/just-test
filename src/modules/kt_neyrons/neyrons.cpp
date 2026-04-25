@@ -5,28 +5,38 @@ using namespace neyrons;
 
 double neyron::Processinput(double input)
 {
-return (input * neyron::weight) + neyron::bias;
+return (input * weight) + bias;
 }
 
 double neyron::Restoreinput(double output)
 {
-return (output - neyron::bias) / neyron::weight;
+return (output - bias) / weight;
 }
 
 void neyron::train(double input, double result)
 {
     double actResult = Processinput(input);
-    neyron::lastError = result - actResult;
+    lastError = result - actResult;
 
-    double delta_w = neyron::smooth * neyron::lastError * input;
-    double delta_b = neyron::smooth * neyron::lastError;
+    double delta_w = smooth * lastError * input;
+    double delta_b = smooth * lastError;
 
 
-    neyron::weight += delta_w;
-    neyron::bias   += delta_b;
+    weight += delta_w;
+    bias   += delta_b;
 }
 
-void neyron::processSave(const string &a){
 
 
-}
+/*
+void neyron::save(const string& filename){
+json file;
+file["weight"] = weight;
+file["bias"] = bias;
+file["smooth"] = smooth;
+
+ofstream fil(filename);
+fil << file.dump(4);
+fil.close();
+
+}*/
