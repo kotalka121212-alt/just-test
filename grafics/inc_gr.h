@@ -1,4 +1,11 @@
 #pragma once
+//*stl ->
+#include <string>
+#include <iostream>
+#include <fstream>
+#include <filesystem>
+#include <stdexcept>
+
 
 //*opengl ->
 
@@ -7,7 +14,13 @@
 #include <glm/glm.hpp> 
 
 
-//*doost ->
+//grafics ->
+
+#include <opengl.h>
+
+
+
+//*boost ->
 
 #include <boost/algorithm/string.hpp> //* для обработки строк
 #include <boost/lexical_cast.hpp>   //* для конвертации
@@ -22,3 +35,4 @@
 #include "vector.h"
 #include "matrix.h"
 
+using namespace std;
