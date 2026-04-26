@@ -35,4 +35,8 @@
 #include "vector.h"
 #include "matrix.h"
 
+
+
+#include <stb_image.h>
+
 using namespace std;
