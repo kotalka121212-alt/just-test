@@ -4,3 +4,7 @@ spawn_files/
 
 
 src/libs/boost_1_90_0/
+src/libs/glm
+src/libs/glfw
+src/libs/glad
+

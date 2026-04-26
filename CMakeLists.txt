@@ -2,15 +2,14 @@
 cmake_minimum_required(VERSION 3.10)
 
 # Название проекта
-project(just-test VERSION 1.0.0 LANGUAGES CXX)
-
+project(just-test VERSION 1.0.0 LANGUAGES C CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 
 add_subdirectory(src)
-
+add_subdirectory(grafics)
 
 # Создаем исполняемый файл (exe) из исходника main.cpp
 add_executable(my_app main.cpp)

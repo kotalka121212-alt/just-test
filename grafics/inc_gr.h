@@ -1,28 +1,13 @@
 #pragma once
 
+//*opengl ->
+
+#include <glad/include/glad/glad.h>  
+#include <GLFW/glfw3.h>   
+#include <glm/glm.hpp> 
 
 
-//stl ->
-#include <string>
-#include <iostream>
-#include <fstream>
-#include <filesystem>
-
-//libs ->
-#include <json.hpp>
-
-
-
-
-//nn ->
-#include "vector.h"
-#include "matrix.h"
-#include "activate.h"
-#include "layer.h"
-#include "network.h"
-
-
-//boost ->
+//*doost ->
 
 #include <boost/algorithm/string.hpp> //* для обработки строк
 #include <boost/lexical_cast.hpp>   //* для конвертации
@@ -32,16 +17,8 @@
 #include <boost/random/uniform_real_distribution.hpp>
 
 
-//opengl ->
+//*nn ->
 
-#include <glad/include/glad/glad.h>  
-#include <GLFW/glfw3.h>   
-#include <glm/glm.hpp> 
-
-
-
-using namespace std;
-using json = nlohmann::json;
-
-
+#include "vector.h"
+#include "matrix.h"
 

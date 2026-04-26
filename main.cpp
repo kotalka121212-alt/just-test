@@ -1,8 +1,8 @@
+
 #include <data.h>
 #include <jsones.h>
 #include <includes.h>
 #include <myiterator.h>
-
 
 
 using namespace std;
@@ -11,43 +11,42 @@ using json = nlohmann::json;
 
 
 int main(){
-
-
 setlocale(LC_ALL, "ru_RU.UTF-8");
-
 //*iter::choose();
 
-    NeuralNetwork net(0.5);
-    net.addLayer(2, 4);
-    net.addLayer(4, 1);
-
-    Vector inputs[] = {
-        Vector({0.0, 0.0}),
-        Vector({0.0, 1.0}),
-        Vector({1.0, 0.0}),
-        Vector({1.0, 1.0})
-    };
-    Vector targets[] = {
-        Vector({0.0}),
-        Vector({1.0}),
-        Vector({1.0}),
-        Vector({0.0})
-    };
-
-    // Train
-    for (int epoch = 0; epoch < 20000; ++epoch) {
-        for (int i = 0; i < 4; ++i) {
-            net.train(inputs[i], targets[i]);
-        }
+    if (!glfwInit()) {
+        std::cerr << "GLFW init error\n";
+        return 1;
     }
 
-    // Test
-    for (int i = 0; i < 4; ++i) {
-        Vector out = net.predict(inputs[i]);
-        inputs[i].print();
-        std::cout << " -> ";
-        out.print();
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+
+    GLFWwindow* window = glfwCreateWindow(800, 600, "Test Window", nullptr, nullptr);
+    if (!window) {
+        std::cerr << "Window creation error\n";
+        glfwTerminate();
+        return 1;
     }
+
+    glfwMakeContextCurrent(window);
+
+    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
+        std::cerr << "GLAD init error\n";
+        return 1;
+    }
+
+    while (!glfwWindowShouldClose(window)) {
+        glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+        glClear(GL_COLOR_BUFFER_BIT);
+        glfwSwapBuffers(window);
+        glfwPollEvents();
+    }
+
+    glfwTerminate();
+
+
 
     return 0;
 } 

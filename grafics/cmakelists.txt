@@ -1,0 +1,3 @@
+add_library(grafics INTERFACE)
+target_include_directories(grafics INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})
+target_link_libraries(grafics INTERFACE glad glfw glm boost_interf nn)
