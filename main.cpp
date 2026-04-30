@@ -2,7 +2,6 @@
 #define STB_IMAGE_IMPLEMENTATION
 
 #include <data.h>
-#include <jsones.h>
 #include <includes.h>
 #include <myiterator.h>
 
@@ -25,7 +24,7 @@ setlocale(LC_ALL, "ru_RU.UTF-8");
 
     try {
         GLFW glfw; // Старт GLFW
-        Window w(600, 800, "Nexus Engine");
+        Window w(600, 800, "Nexus");
         w.setIcon("../photo.png");
         
         w.loop();

@@ -3,8 +3,8 @@ spawn_files/
 
 
 
-src/libs/boost_1_90_0/
-src/libs/glm
-src/libs/glfw
-src/libs/glad
-
+engine/source_libs/libs/boost_1_90_0/
+engine/source_libs/libs/glm
+engine/source_libs/libs/glfw
+engine/source_libs/libs/glad
+engine/source_libs/libs/imgui

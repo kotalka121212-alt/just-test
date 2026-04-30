@@ -1,0 +1,22 @@
+add_library(all_libs INTERFACE)
+
+
+
+
+
+
+
+
+add_subdirectory(libs)
+
+
+
+
+target_link_libraries(all_libs INTERFACE
+libs
+
+
+
+
+)
+
