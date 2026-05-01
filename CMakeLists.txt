@@ -21,6 +21,7 @@ add_subdirectory(engine)
 
 # Создаем исполняемый файл (exe) из исходника main.cpp
 add_executable(my_app main.cpp)
+add_executable(test_client test_client.cpp)
 
 
 add_library(sub_lib INTERFACE)
@@ -33,7 +34,7 @@ main_lib grafics inc_lib
 )
 
 
-
+target_link_libraries(test_client PRIVATE sub_lib)
 target_link_libraries(my_app PRIVATE 
 sub_lib
 

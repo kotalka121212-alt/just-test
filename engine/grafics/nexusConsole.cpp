@@ -38,37 +38,55 @@ void NexusGui::RenderPaintWindow() {
 void NexusGui::RenderConsoleWindow(GLFWwindow* window) {
     ImGui::Begin("Nexus System Console");
     
-    // Область вывода логов
+    // 1. Область вывода логов
     float footer_height = ImGui::GetStyle().ItemSpacing.y + ImGui::GetFrameHeightWithSpacing();
     ImGui::BeginChild("ScrollingRegion", ImVec2(0, -footer_height), true);
+    
     for (auto it = console.begin(); it != console.end(); ++it) {
         ImGui::TextUnformatted(it->c_str());
     }
-    if (ImGui::GetScrollY() >= ImGui::GetScrollMaxY()) ImGui::SetScrollHereY(1.0f);
+
+    // Автопрокрутка вниз
+    if (ImGui::GetScrollY() >= ImGui::GetScrollMaxY()) {
+        ImGui::SetScrollHereY(1.0f);
+    }
     ImGui::EndChild();
 
     ImGui::Separator();
 
-    // Поле ввода команд[cite: 4, 9]
-    if (ImGui::InputText("Command", console.InputBuf, IM_ARRAYSIZE(console.InputBuf), ImGuiInputTextFlags_EnterReturnsTrue)) {
-        std::string cmdLine(console.InputBuf);
-        console.AddLog("> " + cmdLine);
+    // 2. Поле ввода команд
+    // Используем флаг EnterReturnsTrue, чтобы код срабатывал только при нажатии Enter
+    if (ImGui::InputText("##cmd", console.InputBuf, IM_ARRAYSIZE(console.InputBuf), ImGuiInputTextFlags_EnterReturnsTrue)) {
+        std::string cmd(console.InputBuf);
 
-        if (cmdLine == "exit") {
-            glfwSetWindowShouldClose(window, true); // Корректное закрытие
-        }
-        else if (cmdLine.substr(0, 4) == "say ") {
-            console.AddLog("[Local] You: " + cmdLine.substr(4));
-        }
-        else if (cmdLine == "clear") {
-            console.Logs.clear();
+        if (cmd.length() > 0) {
+            // Обработка команды "say "
+            if (cmd.substr(0, 4) == "say ") {
+                std::string payload = "[Nexus]: " + cmd.substr(4);
+                
+                // Проверяем, что сокет был передан через SetSocket в Window::loop
+                if (console.NetworkSocket) {
+                    // Отправляем сообщение в твой клиент (5555 порт)
+                    console.NetworkSocket->send(zmq::buffer(payload), zmq::send_flags::none);
+                }
+                
+                console.AddLog(payload); // Добавляем в локальный лог
+            } 
+            else {
+                // Если это не "say", просто логируем ввод
+                console.AddLog("> " + cmd);
+            }
         }
 
+        // Очищаем буфер после нажатия Enter
         console.InputBuf[0] = '\0';
+        
+        // Возвращаем фокус на поле ввода
+        ImGui::SetKeyboardFocusHere(-1);
     }
+
     ImGui::End();
 }
-
  void NexusGui::ApplyToShader(Shader& myShader, float width, float height){
     
 // 2. Считаем матрицу ПРОЕКЦИИ (делаем мир плоским 800x600)

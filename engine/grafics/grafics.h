@@ -1,7 +1,7 @@
 #pragma once
 
 #include "opengl.h"
-
+#include <zmq.hpp>
 
 class Window {
 private:
@@ -99,6 +99,13 @@ void close() {
 
         NexusGui ui;
 
+zmq::context_t context(1);
+zmq::socket_t publisher(context, zmq::socket_type::pub); // Используем socket_type
+publisher.bind("tcp://*:5557");
+
+
+
+ui.GetConsole().SetSocket(&publisher);
 
         // 4. Основной цикл
         while (!glfwWindowShouldClose(mWindow)) {
@@ -108,9 +115,13 @@ void close() {
 ui.DrawWidgets(mWindow);
 
 
+
+
 myShader.use();
 
 ui.ApplyToShader(myShader,width,height);
+
+
 
 glBindVertexArray(VAO);
 
@@ -120,6 +131,8 @@ glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 
 
 // 4. РЕНДЕР (Отрисовка)
+
+
             ui.imguiRend();
 
             glfwSwapBuffers(mWindow);

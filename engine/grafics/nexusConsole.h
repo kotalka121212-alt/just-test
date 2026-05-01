@@ -6,11 +6,19 @@
 #include <imgui_impl_glfw.h>
 #include <imgui_impl_opengl3.h>
 
+#include <zmq.hpp>
+
 struct NexusConsole {
     std::vector<std::string> Logs;
-    char InputBuf[256] = ""; // Буфер для ввода текста
+    char InputBuf[256] = ""; 
 
-    // Итераторы для удобного обхода (то, что ты просил)
+    // Храним адрес сокета из main
+    zmq::socket_t* NetworkSocket = nullptr;
+
+    void SetSocket(zmq::socket_t* s) { 
+        NetworkSocket = s; 
+    }
+
     auto begin() { return Logs.begin(); }
     auto end() { return Logs.end(); }
 
@@ -18,6 +26,7 @@ struct NexusConsole {
         Logs.push_back(text);
     }
 };
+
 
 
 class NexusGui {
@@ -36,6 +45,9 @@ class NexusGui {
 
 public:
     NexusGui();
+
+    static NexusConsole& GetConsole() { return console; }
+
     void DrawWidgets(GLFWwindow* window);
     void ApplyToShader(class Shader& myShader, float width, float height); 
     void imguiRend();
