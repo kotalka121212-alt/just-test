@@ -44,6 +44,12 @@ ImGui_ImplOpenGL3_Init("#version 130"); // Версия шейдеров
 
     }
 
+
+void close() {
+    glfwSetWindowShouldClose(mWindow, true);
+}
+
+
     ~Window() {
         if (mWindow) glfwDestroyWindow(mWindow);
     }
@@ -90,11 +96,8 @@ ImGui_ImplOpenGL3_Init("#version 130"); // Версия шейдеров
         glBindVertexArray(0);
 
 
-        static float squarePos[2] = { 400.0f, 300.0f }; // Центр экрана
-        static float squareScale[2] = { 100.0f, 100.0f }; // Заметный размер
-        static float squareRotation = 0.0f;         // Поворот (в градусах)
-        static float cubeColor[4] = { 1.0f, 0.5f, 0.2f, 1.0f };
 
+        NexusGui ui;
 
 
         // 4. Основной цикл
@@ -102,68 +105,12 @@ ImGui_ImplOpenGL3_Init("#version 130"); // Версия шейдеров
             glClearColor(0.1f, 0.1f, 0.15f, 1.0f);
             glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-ImGui_ImplOpenGL3_NewFrame();
-ImGui_ImplGlfw_NewFrame();
-ImGui::NewFrame();
-
-
-
-// --- ВИДЖЕТ №1: Управление цветом ---
-ImGui::Begin("Nexus Paint"); 
-    ImGui::TextColored(ImVec4(1, 1, 0, 1), "Color Settings");
-    ImGui::ColorEdit4("Square Color", cubeColor); 
-ImGui::End();
-
-// --- ВИДЖЕТ №2: Преобразования (Трансформы) ---
-ImGui::Begin("Nexus Transform");
-    ImGui::TextColored(ImVec4(0, 1, 1, 1), "Geometry Controls");
-    
-    ImGui::Separator();
-    
-    // Двигаем (в пикселях, если добавил ortho)
-    ImGui::DragFloat2("Position (X,Y)", squarePos, 1.0f);
-    
-    // Масштабируем (отдельно ширину и высоту)
-    ImGui::DragFloat2("Scale (W,H)", squareScale, 1.0f, 1.0f, 500.0f);
-    
-    // Вращаем
-    ImGui::SliderFloat("Rotation", &squareRotation, 0.0f, 360.0f);
-    
-    if (ImGui::Button("Reset Transform")) {
-        squarePos[0] = 400.0f; squarePos[1] = 300.0f;
-        squareScale[0] = 100.0f; squareScale[1] = 100.0f;
-        squareRotation = 0.0f;
-    }
-ImGui::End();
-
-
-
-            // Очистка экрана
-
-
-            // Рендеринг
+ui.DrawWidgets(mWindow);
 
 
 myShader.use();
 
-// 2. Считаем матрицу ПРОЕКЦИИ (делаем мир плоским 800x600)
-// Теперь 0,0 — это левый верхний угол, а 800,600 — правый нижний
-glm::mat4 projection = glm::ortho(0.0f, width, height, 0.0f, -100.0f, 100.0f);
-int projLoc = glGetUniformLocation(myShader.ID, "projection");
-glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
-
-// 3. Считаем матрицу МОДЕЛИ (где конкретно наш квадрат)
-glm::mat4 model = glm::mat4(1.0f);
-model = glm::translate(model, glm::vec3(squarePos[0], squarePos[1], 0.0f)); // Смещение
-model = glm::rotate(model, glm::radians(squareRotation), glm::vec3(0, 0, 1)); // Поворот
-model = glm::scale(model, glm::vec3(squareScale[0], squareScale[1], 1.0f));   // Размер
-
-int modelLoc = glGetUniformLocation(myShader.ID, "model");
-glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-
-// 4. Закидываем цвет (как раньше)
-int colorLoc = glGetUniformLocation(myShader.ID, "ourColor");
-glUniform4fv(colorLoc, 1, cubeColor);
+ui.ApplyToShader(myShader,width,height);
 
 glBindVertexArray(VAO);
 
@@ -173,8 +120,7 @@ glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 
 
 // 4. РЕНДЕР (Отрисовка)
-    ImGui::Render();
-    ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+            ui.imguiRend();
 
             glfwSwapBuffers(mWindow);
             glfwPollEvents();

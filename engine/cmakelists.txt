@@ -1,7 +1,7 @@
 add_library(main_lib INTERFACE)
 add_library(inc_lib INTERFACE)
 
-
+add_subdirectory(source_files)
 add_subdirectory(grafics)
 add_subdirectory(source_libs)
 add_subdirectory(src/files)

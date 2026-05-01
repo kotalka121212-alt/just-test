@@ -1,5 +1,6 @@
 #pragma once
 #include <inc_gr.h>
+#include "nexusConsole.h"
 
 class GLFW{
 

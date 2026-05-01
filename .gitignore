@@ -3,8 +3,10 @@ spawn_files/
 
 
 
-engine/source_libs/libs/boost_1_90_0/
+engine/source_libs/libs/boost_1_90_0
 engine/source_libs/libs/glm
 engine/source_libs/libs/glfw
 engine/source_libs/libs/glad
 engine/source_libs/libs/imgui
+engine/source_libs/libs/cppzmq-master
+engine/source_libs/libs/libzmq-master

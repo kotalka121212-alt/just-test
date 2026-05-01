@@ -1,6 +1,10 @@
 #pragma once
 #include "inc_gr.h"
 
+#include <imgui.h>
+
+#include <imgui_impl_glfw.h>
+#include <imgui_impl_opengl3.h>
 class Shader {
 public:
     unsigned int ID;

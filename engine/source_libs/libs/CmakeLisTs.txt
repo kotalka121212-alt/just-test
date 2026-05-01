@@ -6,21 +6,42 @@ ${CMAKE_CURRENT_SOURCE_DIR}
 ${CMAKE_CURRENT_SOURCE_DIR}/glm
 ${CMAKE_CURRENT_SOURCE_DIR}/boost_1_90_0
 
+${CMAKE_CURRENT_SOURCE_DIR}/libzmq-master/include
+${CMAKE_CURRENT_SOURCE_DIR}/cppzmq-master
+
 )
 
 
+# Выключаем всё, что требует внешних либ типа GnuTLS или NSS
+set(ZMQ_BUILD_TESTS OFF CACHE BOOL "" FORCE)
+set(CPPZMQ_BUILD_TESTS OFF CACHE BOOL "" FORCE)
+set(WITH_PERF_TOOL OFF CACHE BOOL "" FORCE)
+set(ENABLE_CPACK OFF CACHE BOOL "" FORCE)
+set(ENABLE_DRAFTS OFF CACHE BOOL "" FORCE)
+set(BUILD_SHARED OFF CACHE BOOL "" FORCE) # Собираем только статику
+set(BUILD_STATIC ON CACHE BOOL "" FORCE)
 
+# Если вылезли ошибки из image_59b598.png, вырубаем и это
+set(ENABLE_WSS OFF CACHE BOOL "" FORCE)
+set(WITH_TLS OFF CACHE BOOL "" FORCE)
+
+
+
+include_directories("cppzmq-master")
+include_directories("libzmq-master")
 
 
 add_subdirectory(glfw)
 add_subdirectory(glad)
 add_subdirectory(imgui)
+add_subdirectory(libzmq-master)
+add_subdirectory(cppzmq-master)
 
 
 target_link_libraries(libs INTERFACE 
 
 
-    glfw    imgui_lib
-    glad 
-    opengl32  # КРИТИЧНО ДЛЯ WINDOWS: без этой системной либы OpenGL не заведется
+    glfw        imgui_lib       ws2_32       
+    glad        libzmq-static   iphlpapi
+    opengl32    
 )
