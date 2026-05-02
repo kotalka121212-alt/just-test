@@ -1,5 +1,5 @@
 # Добавляем библиотеку
-add_library(kt_math STATIC 
+add_library(nexus_modules STATIC 
 kt_math/kt_math.h kt_math/kt_math.cpp
 kt_neyrons/neyrons.h kt_neyrons/neyrons.cpp
 )
@@ -9,7 +9,7 @@ kt_neyrons/neyrons.h kt_neyrons/neyrons.cpp
 
 # Указываем, где искать заголовочные файлы этой библиотеки
 # PUBLIC означает: все, кто линкует MyLib, автоматически видят папку ${CMAKE_CURRENT_SOURCE_DIR}
-target_include_directories(kt_math PUBLIC 
+target_include_directories(nexus_modules PUBLIC 
 ${CMAKE_CURRENT_SOURCE_DIR}
 ${CMAKE_CURRENT_SOURCE_DIR}/kt_math
 ${CMAKE_CURRENT_SOURCE_DIR}/kt_neyrons

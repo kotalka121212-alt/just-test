@@ -10,13 +10,13 @@ int main() {
     zmq::socket_t subscriber(context, zmq::socket_type::sub);
 
     // 3. Подключаемся к адресу, который указан в сервере (твоем движке)
-    subscriber.connect("tcp://localhost:5557");
+    subscriber.connect("tcp://localhost:5555");
 
     // 4. Важно: подписываемся на ВСЕ сообщения (пустая строка "" означает "всё")
     subscriber.set(zmq::sockopt::subscribe, "");
 
     std::cout << "Nexus Logger Client started..." << std::endl;
-    std::cout << "Waiting for data from engine on port 5557..." << std::endl;
+    std::cout << "Waiting for data from engine on port 5555..." << std::endl;
 
     while (true) {
         zmq::message_t reply;

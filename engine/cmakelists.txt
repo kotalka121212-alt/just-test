@@ -1,11 +1,9 @@
 add_library(main_lib INTERFACE)
 add_library(inc_lib INTERFACE)
 
-add_subdirectory(source_files)
+
 add_subdirectory(grafics)
 add_subdirectory(source_libs)
-add_subdirectory(src/files)
-add_subdirectory(src/files/source_cmds)
 add_subdirectory(src/modules)
 add_subdirectory(src/nn)
 
@@ -15,21 +13,19 @@ add_subdirectory(src/nn)
 
 
 target_include_directories(main_lib INTERFACE 
-${CMAKE_CURRENT_SOURCE_DIR}src//files/source_cmds
-${CMAKE_CURRENT_SOURCE_DIR}src//files
-${CMAKE_CURRENT_SOURCE_DIR}src//nn
-
+${CMAKE_CURRENT_SOURCE_DIR}/src/nn
+${CMAKE_CURRENT_SOURCE_DIR}/src
 
 )
 
 target_link_libraries(inc_lib INTERFACE
-all_libs  kt_math nn 
+all_libs nexus_modules nexus_core_libs 
 )
 
 
 target_link_libraries(main_lib INTERFACE
-MyLib                                       
-mysources              
+                                     
+            
 
        
 

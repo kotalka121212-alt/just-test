@@ -1,6 +1,24 @@
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTOUIC ON)
+set(CMAKE_AUTORCC ON)
+
+
 add_library(all_libs INTERFACE)
 
 
+
+
+set(VCPKG_PATH "G:/progects_c++/vcpkg_hub/vcpkg/installed/x64-mingw-dynamic")
+
+include_directories("${VCPKG_PATH}/include")
+
+# 3. Указываем, где искать файлы библиотек (.a / .lib)
+link_directories("${VCPKG_PATH}/lib")
+
+set(CMAKE_PREFIX_PATH "G:/progects_c++/QT/6.11.0/mingw_64")
+find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets)
+
+add_library(viget INTERFACE)
 
 
 
@@ -9,12 +27,18 @@ add_library(all_libs INTERFACE)
 
 add_subdirectory(libs)
 
+target_link_libraries(viget INTERFACE
+    Qt6::Core
+    Qt6::Gui
+    Qt6::Widgets
+
+)
 
 
 
 target_link_libraries(all_libs INTERFACE
 libs
-
+viget
 
 
 

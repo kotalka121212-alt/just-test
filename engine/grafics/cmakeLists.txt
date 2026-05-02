@@ -1,11 +1,15 @@
 # 1. Делаем библиотеку статической и скармливаем ей файл реализации[cite: 33, 34]
 add_library(grafics STATIC 
-    nexusConsole.cpp 
+    src/nexusConsole.cpp 
 )
 
 # 2. Указываем, где лежат хедеры. 
 # Используем PUBLIC, чтобы и сама либа, и твой my_app их видели.
-target_include_directories(grafics PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(grafics PUBLIC 
+${CMAKE_CURRENT_SOURCE_DIR}/src
+${CMAKE_CURRENT_SOURCE_DIR}/functions
+
+)
 
 # 3. Линкуем зависимости (imgui, glad и т.д.)[cite: 33]
 target_link_libraries(grafics PUBLIC inc_lib)

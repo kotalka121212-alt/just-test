@@ -1,22 +1,27 @@
 
 #define STB_IMAGE_IMPLEMENTATION
 
-#include <data.h>
-#include <includes.h>
-#include <myiterator.h>
+
+
+
 
 #include <shader.h>
-#include "inc_gr.h"
 #include <grafics.h>
 
 #include <zmq.hpp>
+
+
+#include <QApplication>
+#include <QPushButton>
+#include <QMessageBox>
 
 using namespace std;
 using json = nlohmann::json;
 
 
-int main(){
+int main(int argc, char *argv[]){
 setlocale(LC_ALL, "ru_RU.UTF-8");
+
 
 
 

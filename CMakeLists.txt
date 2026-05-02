@@ -35,7 +35,4 @@ main_lib grafics inc_lib
 
 
 target_link_libraries(test_client PRIVATE sub_lib)
-target_link_libraries(my_app PRIVATE 
-sub_lib
-
-)
+target_link_libraries(my_app PRIVATE sub_lib)

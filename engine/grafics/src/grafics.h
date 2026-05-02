@@ -101,7 +101,7 @@ void close() {
 
 zmq::context_t context(1);
 zmq::socket_t publisher(context, zmq::socket_type::pub); // Используем socket_type
-publisher.bind("tcp://*:5557");
+publisher.bind("tcp://*:5555");
 
 
 
