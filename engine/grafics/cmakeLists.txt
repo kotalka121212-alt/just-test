@@ -1,13 +1,17 @@
 # 1. Делаем библиотеку статической и скармливаем ей файл реализации[cite: 33, 34]
 add_library(grafics STATIC 
-    src/nexusConsole.cpp 
+    widgets/nexusConsole.cpp 
+    functions/Mesh.cpp
+    functions/NexusCommandHandler.cpp
 )
 
 # 2. Указываем, где лежат хедеры. 
 # Используем PUBLIC, чтобы и сама либа, и твой my_app их видели.
 target_include_directories(grafics PUBLIC 
+${CMAKE_CURRENT_SOURCE_DIR}
 ${CMAKE_CURRENT_SOURCE_DIR}/src
 ${CMAKE_CURRENT_SOURCE_DIR}/functions
+${CMAKE_CURRENT_SOURCE_DIR}/widgets
 
 )
 

@@ -6,6 +6,9 @@
 #include <filesystem>
 #include <stdexcept>
 #include <vector>
+#include <map>
+#include <functional>
+#include <sstream>
 
 
 //*opengl ->

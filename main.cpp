@@ -4,7 +4,7 @@
 
 
 
-
+#include "includes.h"
 #include <shader.h>
 #include <grafics.h>
 
@@ -26,7 +26,6 @@ setlocale(LC_ALL, "ru_RU.UTF-8");
 
 
 
-
     try {
         GLFW glfw; // Старт GLFW
         Window w(600, 800, "Nexus");
@@ -38,6 +37,9 @@ setlocale(LC_ALL, "ru_RU.UTF-8");
         std::cerr << "Критическая ошибка: " << e.what() << std::endl;
         return -1;
     }
+
+
+
 
     return 0;
 } 

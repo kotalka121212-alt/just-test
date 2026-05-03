@@ -2,6 +2,7 @@
 
 #include "opengl.h"
 #include <zmq.hpp>
+#include <Mesh.h>
 
 class Window {
 private:
@@ -74,28 +75,7 @@ void close() {
             1, 2, 3  // второй треугольник
         };
 
-        // 3. Создание буферов в GPU
-        unsigned int VBO, VAO, EBO;
-        glGenVertexArrays(1, &VAO);
-        glGenBuffers(1, &VBO);
-        glGenBuffers(1, &EBO);
-
-        glBindVertexArray(VAO);
-
-        glBindBuffer(GL_ARRAY_BUFFER, VBO);
-        glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
-
-        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
-        glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
-
-        // Настройка атрибутов (Position)
-        glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
-        glEnableVertexAttribArray(0);
-
-        // Разблокируем VAO
-        glBindVertexArray(0);
-
-
+        Mesh square(vertices, sizeof(vertices), indices, sizeof(indices));
 
         NexusGui ui;
 
@@ -123,27 +103,23 @@ ui.ApplyToShader(myShader,width,height);
 
 
 
-glBindVertexArray(VAO);
-
-
-
-glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
-
+square.Draw();
 
 // 4. РЕНДЕР (Отрисовка)
-
-
             ui.imguiRend();
-
-            glfwSwapBuffers(mWindow);
+            swapBuffers();
             glfwPollEvents();
         }
-
-        // Очистка памяти GPU после выхода из цикла
-        glDeleteVertexArrays(1, &VAO);
-        glDeleteBuffers(1, &VBO);
-        glDeleteBuffers(1, &EBO);
     }
+
+
+
+
+
+
+
+
+
 
     void setIcon(const string& path) {
         GLFWimage image;
