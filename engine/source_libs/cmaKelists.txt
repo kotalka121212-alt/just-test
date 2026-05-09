@@ -4,27 +4,34 @@ set(CMAKE_AUTORCC ON)
 
 
 add_library(all_libs INTERFACE)
+add_library(viget INTERFACE)
 
 
 
 
 set(VCPKG_PATH "G:/progects_c++/vcpkg_hub/vcpkg/installed/x64-mingw-dynamic")
 
+
+
+
+
 include_directories("${VCPKG_PATH}/include")
 
-# 3. Указываем, где искать файлы библиотек (.a / .lib)
+
 link_directories("${VCPKG_PATH}/lib")
 
 set(CMAKE_PREFIX_PATH "G:/progects_c++/QT/6.11.0/mingw_64")
 find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets)
 
-add_library(viget INTERFACE)
 
 
 
 
+# Выключаем драйверы, которые требуют старый libusb-win32
+set(LIBNFC_DRIVER_ACR122_USB OFF CACHE BOOL "" FORCE)
+set(LIBNFC_DRIVER_PN53X_USB OFF CACHE BOOL "" FORCE)
 
-
+add_subdirectory(libs2)
 add_subdirectory(libs)
 
 target_link_libraries(viget INTERFACE
@@ -37,10 +44,15 @@ target_link_libraries(viget INTERFACE
 
 
 target_link_libraries(all_libs INTERFACE
-libs
+libs nex_sdl
 viget
 
 
 
 )
+
+
+
+
+
 

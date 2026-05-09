@@ -2,9 +2,10 @@
 layout (location = 0) in vec3 aPos;
 
 uniform mat4 model;
-uniform mat4 projection; // Новая переменная
+uniform mat4 view;
+uniform mat4 projection;
 
 void main() {
-    // Сначала применяем трансформации объекта, потом проекцию мира
-    gl_Position = projection * model * vec4(aPos, 1.0);
+    // Порядок перемножения СТРОГО такой
+    gl_Position = projection * view * model * vec4(aPos, 1.0);
 }

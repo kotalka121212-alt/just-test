@@ -7,7 +7,7 @@ project(just-test VERSION 1.0.0 LANGUAGES C CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-
+set(USB_LIB_PATH "G:/progects_c++/mingw/ucrt64/lib/libusb-1.0.dll.a")
 
 set(BUILD_SHARED OFF CACHE BOOL "" FORCE)
 set(BUILD_STATIC ON CACHE BOOL "" FORCE)
@@ -23,12 +23,26 @@ add_subdirectory(engine)
 add_executable(my_app main.cpp)
 add_executable(test_client test_client.cpp)
 
+link_directories("G:/progects_c++/mingw/ucrt64/lib")
+
+
+
+add_executable(mobile 
+    nexus-mobile/mobile.cpp
+
+)
+
+target_include_directories(mobile PRIVATE 
+    "engine/source_libs/libs2/masters/libnfc-master/include"
+
+)
+
 
 add_library(sub_lib INTERFACE)
 
 
 target_link_libraries(sub_lib INTERFACE 
-main_lib grafics inc_lib
+main_lib grafics inc_lib 
 
 
 )
@@ -36,3 +50,9 @@ main_lib grafics inc_lib
 
 target_link_libraries(test_client PRIVATE sub_lib)
 target_link_libraries(my_app PRIVATE sub_lib)
+target_link_libraries(mobile PRIVATE sub_lib
+    nfc 
+    "${USB_LIB_PATH}"
+
+)
+

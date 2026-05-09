@@ -19,6 +19,7 @@ NexusCommandHandler::NexusCommandHandler() {
     commands["exit"] = [](const std::vector<std::string>& args) {
         exit(0);
     };
+    
 
 
 

@@ -1,6 +1,7 @@
 
 add_library(libs INTERFACE)
 
+
 target_include_directories(libs INTERFACE 
 ${CMAKE_CURRENT_SOURCE_DIR}
 ${CMAKE_CURRENT_SOURCE_DIR}/glm
@@ -30,12 +31,14 @@ set(WITH_TLS OFF CACHE BOOL "" FORCE)
 include_directories("cppzmq-master")
 include_directories("libzmq-master")
 
-
+add_subdirectory(sdl)
 add_subdirectory(glfw)
 add_subdirectory(glad)
 add_subdirectory(imgui)
 add_subdirectory(libzmq-master)
 add_subdirectory(cppzmq-master)
+
+
 
 
 target_link_libraries(libs INTERFACE 

@@ -36,18 +36,20 @@ struct NexusConsole {
 class NexusGui {
 private:
     // Статические данные для шейдера
-    static inline float squarePos[2] = { 400.0f, 300.0f };
-    static inline float squareScale[2] = { 100.0f, 100.0f };
-    static inline float squareRotation = 0.0f;
+    static inline float squarePos[3] = { 0.0f, 0.0f, 0.0f }; // Теперь 3D позиция
+    static inline float squareRot[3] = { 0.0f, 0.0f, 0.0f }; // ТРИ вектора вращения
+    static inline float squareScale[3] = { 1.0f, 1.0f, 1.0f };
     static inline float cubeColor[4] = { 1.0f, 0.5f, 0.2f, 1.0f };
 
     // Указатель на обработчик (решает проблему цикличных инклудов)
     NexusCommandHandler* cmdHandler;
 
     static NexusConsole console;
+    void RenderPaintWindow();      // Покраска
+    void RenderTransformWindow();  // Перемещение
+    void RenderScaleWindow();      // Скейл
+    void RenderRotateWindow();
 
-    void RenderTransformWindow();
-    void RenderPaintWindow();
     void RenderConsoleWindow(GLFWwindow* window);
 
 public:

@@ -10,3 +10,5 @@ engine/source_libs/libs/glad
 engine/source_libs/libs/imgui
 engine/source_libs/libs/cppzmq-master
 engine/source_libs/libs/libzmq-master
+engine/source_libs/libs/sdl
+engine/source_libs/libs2/masters

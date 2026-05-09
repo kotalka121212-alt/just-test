@@ -2,6 +2,8 @@
 add_library(nexus_modules STATIC 
 kt_math/kt_math.h kt_math/kt_math.cpp
 kt_neyrons/neyrons.h kt_neyrons/neyrons.cpp
+
+kt_math/nexus_alg.h kt_math/nexus_alg.cpp
 )
 
 

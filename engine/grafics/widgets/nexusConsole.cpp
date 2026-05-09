@@ -24,23 +24,40 @@ void NexusGui::DrawWidgets(GLFWwindow* window) {
     ImGui_ImplGlfw_NewFrame();
     ImGui::NewFrame();
 
-    RenderTransformWindow();
     RenderPaintWindow();
+    RenderTransformWindow();
+    RenderScaleWindow();
+    RenderRotateWindow();
     RenderConsoleWindow(window);
 }
 
+
+
 void NexusGui::RenderTransformWindow() {
-    ImGui::Begin("Nexus Transform");
-    ImGui::TextColored(ImVec4(0, 1, 1, 1), "Geometry Controls");
-    ImGui::DragFloat2("Position", squarePos, 1.0f);
-    ImGui::DragFloat2("Scale", squareScale, 1.0f, 1.0f, 500.0f);
-    ImGui::SliderFloat("Rotation", &squareRotation, 0.0f, 360.0f);
+    ImGui::Begin("Nexus Move");
+    ImGui::DragFloat3("XYZ Position", squarePos, 0.05f);
+    if (ImGui::Button("Reset Pos")) { squarePos[0]=0; squarePos[1]=0; squarePos[2]=0; }
+    ImGui::End();
+}
+
+void NexusGui::RenderRotateWindow() {
+    ImGui::Begin("Nexus Rotate");
+    // Слайдер для 3 векторов вращения, как ты и просил
+    ImGui::SliderFloat3("Rotation Angles", squareRot, 0.0f, 360.0f);
+    if (ImGui::Button("Reset Rotation")) { squareRot[0]=0; squareRot[1]=0; squareRot[2]=0; }
+    ImGui::End();
+}
+
+void NexusGui::RenderScaleWindow() {
+    ImGui::Begin("Nexus Scale");
+    ImGui::DragFloat3("XYZ Scale", squareScale, 0.01f);
+    if (ImGui::Button("Reset Scale")) { squareScale[0]=1; squareScale[1]=1; squareScale[2]=1; }
     ImGui::End();
 }
 
 void NexusGui::RenderPaintWindow() {
-    ImGui::Begin("Nexus Paint");
-    ImGui::ColorEdit4("Square Color", cubeColor);
+    ImGui::Begin("Nexus Painter");
+    ImGui::ColorEdit4("Object Color", cubeColor);
     ImGui::End();
 }
 
@@ -52,23 +69,24 @@ void NexusGui::RenderConsoleWindow(GLFWwindow* window) {
 }
 
 void NexusGui::ApplyToShader(Shader& myShader, float width, float height) {
-    // 2. Матрица ПРОЕКЦИИ
-    glm::mat4 projection = glm::ortho(0.0f, width, height, 0.0f, -100.0f, 100.0f);
-    int projLoc = glGetUniformLocation(myShader.ID, "projection");
-    glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
+    glm::mat4 projection = glm::perspective(glm::radians(45.0f), width / height, 0.1f, 100.0f);
+    glm::mat4 view = glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 0.0f, -5.0f));
 
-    // 3. Матрица МОДЕЛИ
     glm::mat4 model = glm::mat4(1.0f);
-    model = glm::translate(model, glm::vec3(squarePos[0], squarePos[1], 0.0f));
-    model = glm::rotate(model, glm::radians(squareRotation), glm::vec3(0, 0, 1));
-    model = glm::scale(model, glm::vec3(squareScale[0], squareScale[1], 1.0f));
+    model = glm::translate(model, glm::vec3(squarePos[0], squarePos[1], squarePos[2]));
+    
+    // Вращение по 3 осям
+    model = glm::rotate(model, glm::radians(squareRot[0]), glm::vec3(1, 0, 0));
+    model = glm::rotate(model, glm::radians(squareRot[1]), glm::vec3(0, 1, 0));
+    model = glm::rotate(model, glm::radians(squareRot[2]), glm::vec3(0, 0, 1));
+    
+    model = glm::scale(model, glm::vec3(squareScale[0], squareScale[1], squareScale[2]));
 
-    int modelLoc = glGetUniformLocation(myShader.ID, "model");
-    glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-
-    // 4. Цвет
-    int colorLoc = glGetUniformLocation(myShader.ID, "ourColor");
-    glUniform4fv(colorLoc, 1, cubeColor);
+    glUseProgram(myShader.ID);
+    glUniformMatrix4fv(glGetUniformLocation(myShader.ID, "projection"), 1, GL_FALSE, glm::value_ptr(projection));
+    glUniformMatrix4fv(glGetUniformLocation(myShader.ID, "view"), 1, GL_FALSE, glm::value_ptr(view));
+    glUniformMatrix4fv(glGetUniformLocation(myShader.ID, "model"), 1, GL_FALSE, glm::value_ptr(model));
+    glUniform4fv(glGetUniformLocation(myShader.ID, "ourColor"), 1, cubeColor);
 }
 
 void NexusGui::imguiRend() {

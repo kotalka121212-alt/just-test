@@ -65,10 +65,10 @@ void close() {
 
         // 2. Данные геометрии (квадрат)
         float vertices[] = {
-             0.5f,  0.5f, 0.0f, // право верх
-             0.5f, -0.5f, 0.0f, // право низ
-            -0.5f, -0.5f, 0.0f, // лево низ
-            -0.5f,  0.5f, 0.0f  // лево верх
+             0.5f,  0.5f, -1.0f, // право верх
+             0.5f, -0.5f, -1.0f, // право низ
+            -0.5f, -0.5f, -1.0f, // лево низ
+            -0.5f,  0.5f, -1.0f  // лево верх
         };
         unsigned int indices[] = {
             0, 1, 3, // первый треугольник
@@ -86,6 +86,8 @@ publisher.bind("tcp://*:5555");
 
 
 ui.GetConsole().SetSocket(&publisher);
+glEnable(GL_DEPTH_TEST);
+
 
         // 4. Основной цикл
         while (!glfwWindowShouldClose(mWindow)) {
