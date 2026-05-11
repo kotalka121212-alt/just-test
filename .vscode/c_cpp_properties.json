@@ -3,7 +3,9 @@
         {
             "name": "Win32",
             "includePath": [
-                "${workspaceFolder}/**"
+                "G:/progects_c++/git_progs/just-test/engine/source_libs/libs2/masters/libnfc-master/include",
+                "G:/progects_c++/git_progs/just-test/engine/source_libs/libs2/masters/mfoc-master/src",
+                "G:/progects_c++/git_progs/just-test/engine/source_libs/libs2/masters/mfcuk-master/src"
             ],
             "defines": [
                 "_DEBUG",

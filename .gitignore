@@ -12,3 +12,5 @@ engine/source_libs/libs/cppzmq-master
 engine/source_libs/libs/libzmq-master
 engine/source_libs/libs/sdl
 engine/source_libs/libs2/masters
+engine/source_libs/libs2/
+android_build

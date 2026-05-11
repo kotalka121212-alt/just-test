@@ -1,0 +1,35 @@
+cmake_minimum_required(VERSION 3.22.1)
+project(NexusMobile)
+
+# 1. Собираем все исходники (твои файлы + файлы движка, если нужно)
+file(GLOB_RECURSE SRC_FILES 
+    "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp" 
+    "${CMAKE_CURRENT_SOURCE_DIR}/*.c"
+    "${ENGINE_DIR}/source/*.cpp"
+    "${ENGINE_DIR}/source/*.c"
+)
+
+# 2. Создаем финальную библиотеку 'main'
+# Android Studio будет искать именно 'libmain.so'
+add_library(main SHARED ${SRC_FILES})
+
+# 3. ВСЕ ИНКЛЮДЫ ЗДЕСЬ
+target_include_directories(main PRIVATE 
+    "${CMAKE_CURRENT_SOURCE_DIR}"       # Сама папка nexus-mobile
+    "${ENGINE_DIR}/include"             # Заголовки движка
+    "${ENGINE_DIR}/source"              # Внутренние заголовки
+    "${SDL_DIR}/include"                # Заголовки SDL3
+    "${ENGINE_DIR}/source_libs/libs/boost_1_90_0" # Boost (если нужен)
+)
+
+# 4. ВСЯ ЛИНКОВКА ЗДЕСЬ
+target_link_libraries(main 
+    SDL3::SDL3     # Ссылка на цель из add_subdirectory(SDL_DIR)
+    GLESv3         # Графика
+    log            # Логи Android
+    android        # Системные вызовы
+)
+
+# Диагностика: выводим список файлов в консоль при генерации
+message(STATUS "--- BUILD CONFIGURED ---")
+message(STATUS "SOURCES: ${SRC_FILES}")

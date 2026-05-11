@@ -11,9 +11,7 @@
 #include <zmq.hpp>
 
 
-#include <QApplication>
-#include <QPushButton>
-#include <QMessageBox>
+
 
 using namespace std;
 using namespace NexAlg;
@@ -33,6 +31,26 @@ while(i < buba.size()){
 cout << buba[i];
 i++;
 }
+
+cout << "\n";
+
+vector<int> swag = {1,3,66,2,88,11};
+
+vector<int>::iterator it;
+
+it = swag.begin(); 
+it += 4;
+
+cout << *it << endl;
+
+
+
+
+
+
+
+
+
 
 
 

@@ -4,7 +4,7 @@ set(CMAKE_AUTORCC ON)
 
 
 add_library(all_libs INTERFACE)
-add_library(viget INTERFACE)
+
 
 
 
@@ -21,7 +21,7 @@ include_directories("${VCPKG_PATH}/include")
 link_directories("${VCPKG_PATH}/lib")
 
 set(CMAKE_PREFIX_PATH "G:/progects_c++/QT/6.11.0/mingw_64")
-find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets)
+
 
 
 
@@ -34,18 +34,13 @@ set(LIBNFC_DRIVER_PN53X_USB OFF CACHE BOOL "" FORCE)
 add_subdirectory(libs2)
 add_subdirectory(libs)
 
-target_link_libraries(viget INTERFACE
-    Qt6::Core
-    Qt6::Gui
-    Qt6::Widgets
 
-)
 
 
 
 target_link_libraries(all_libs INTERFACE
 libs nex_sdl
-viget
+
 
 
 
